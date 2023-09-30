@@ -1,36 +1,123 @@
 import React from 'react'
-import sms from './images/sms.png'
-import appointment from './images/appointment.png'
-import labtest from './images/labtest.png'
-import order from './images/order.png'
-import payment from './images/payment.png'
-import setting from './images/setting.png'
-import dash from './images/dashboard.png'
-import active from './images/Active.png'
+import dashboard from "./images/dashboard icon.svg"
+import labtest from "./images/test icon.svg"
+import appoint from './images/appoinment icon.svg'
+import medicine from './images/medicine icon.svg'
+import messege from './images/message icon.svg'
+import payment from './images/payment icon.svg'
+import settings from './images/settings  icon.svg'
+import help from './images/help icon.svg'
 
-
-function Sidebar() {
+function sidebar() {
   return (
-    <>
- <div className="d-flex" id="wrapper">
-         
-            <div className= "bg-white" id="sidebar-wrapper">
-                <div className="sidebar-heading">Medico Sales</div>
-                <div className="list-group list-group-flush">
-                
-                <div className="list-group-item-light p-3 dashboard" ><img className="dash" src={active}/><img className="dash" src={dash}/>Dashboard</div>
-                <div className="list-group-item-light p-3" ><img className="lab" src={labtest}/>Lab Test</div>
-                    <div className="list-group-item-light p-3" ><img className="appointment" src={appointment}/>Appointments</div>
-                    <div className="  list-group-item-light p-3"><img className="order" src={order}/>Medicine Order</div>
-                    <div className="  list-group-item-light p-3" ><img className="sms" src={sms}/>Message</div>
-                    <div className="  list-group-item-light p-3" ><img className="payment" src={payment}/>Payment</div>
-                    <div className="  list-group-item-light p-3" ><img className="setting" src={setting}/>Settings</div>
-                </div>
-                <div className="sidebar-footer"><i class="fa-regular fa-circle-question help"></i>Help</div>
+   <>
+   <ul className="navbar-nav bg-gradient sidebar sidebar-dark accordion  " id="accordionSidebar">
+     
+            <div className="sidebar-brand d-flex align-items-center justify-content-center mt-5" >
+               
+                <div className="sidebar-brand-text text-primary mx-3"style={{fontFamily: 'Poppins,sansSerif', fontSize:'22px'}}>Medico Sales</div>
             </div>
+
+            
+           <li className="nav-item active  ">
+                <a className="nav-link" href="index.html">
+                   <img  src={dashboard} alt="dashboard icon" /> &nbsp;  &nbsp;
+                       <span className='text-primary'>Dashboard</span></a>
+            </li>
+
+        
+
+            
+            
+
+           <div>
+            <li className="nav-item" >
+                <a className="nav-link  text-dark" href="#" >
+                    <div className='d-flex gap-3 justify-content-center'>
+                 <img className='icon'  src={labtest} />  
+                    
+                   <span className='topic'>  Lab Test</span>
+                    </div>
+                </a>
+               
+            </li>
+
+        
+            <li className="nav-item" >
+                <a className="nav-link  text-dark" href="#" >
+                    <div className='d-flex gap-3 justify-content-center' style={{paddingLeft:"25px"}}>
+                 <img className='icon'  src={appoint} ></img>   
+                    
+                   <span className='topic'>Appointment</span>
+                    </div>
+                </a>
+               
+            </li>
+
+            
+           
+
+           
+    
+            
+            <li className="nav-item " >
+                <a className="nav-link  text-dark" href="#" >
+                    <div className='d-flex gap-3 justify-content-center' style={{paddingLeft:"35px"}}>
+                 <img className='icon'  src={medicine} ></img>   
+                    
+                   <span className='topi'>  Medicine Order</span>
+                    </div>
+                </a>
+               
+            </li>
+
+        
+            <li className="nav-item" >
+                <a className="nav-link  text-dark" href="#" >
+                    <div className='d-flex gap-3 justify-content-center'>
+                 <img className='icon'  src={messege}></img>   
+                    
+                   <span className='topic'>Message</span>
+                    </div>
+                </a>
+               
+            </li>
+
+
+            <li className="nav-item" >
+                <a className="nav-link  text-dark" href="#" >
+                    <div className='d-flex gap-3 justify-content-center'>
+                 <img className='icon'  src={payment}></img>   
+                    
+                   <span className='topic'>  Payment</span>
+                    </div>
+                </a>
+               
+            </li>
+
+            <li className="nav-item" >
+                <a className="nav-link  text-dark" href="#" >
+                    <div className='d-flex gap-3 justify-content-center'>
+                 <img className='icon'  src={settings}></img>   
+                    
+                   <span className='topic'>  Settings</span>
+                    </div>
+                </a>
+               
+            </li>
+
             </div>
-    </>
+
+            <div className='d-flex justify-content-center gap-3 ' style={{paddingTop:'600px'}}>
+                <img src={help} alt="" />
+            <span className='text-dark'> Help</span>
+            </div>
+            </ul>
+
+        
+        
+   </>
   )
 }
 
-export default Sidebar
+export default sidebar
